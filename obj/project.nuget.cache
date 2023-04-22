@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "6oCfgfx8/Bj2mZWlQxwFw8fSPBu14tUmlEerkBnXVyYb5vqZ0dE/VYvJI2Hf1GkAvqSW0N0+74m23BvbeituHA==",
+  "success": true,
+  "projectFilePath": "C:\\project\\IM_Tool\\IM_Tool.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nived\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Nived\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Nived\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Nived\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Nived\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Nived\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
