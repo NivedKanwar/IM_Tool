@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
 using System.Text;
+using System.IO;
+using Microsoft.AspNetCore.Http;
 
 namespace IM_Tool.Controllers
 {
@@ -48,11 +50,12 @@ namespace IM_Tool.Controllers
         byte[] aesIV =MD5.HashData(passwordBytes);
         var secretKey = Encoding.UTF8.GetString(aesKey);
         var encryptedUser = EncryptUsingAES(username,aesKey,aesIV);
+        var encryptedUserString = Encoding.UTF8.GetString(encryptedUser,0,encryptedUser.Length);
         var cookieOptions = new CookieOptions{Expires = DateTime.Now.AddDays(30)};
         HttpContext.Response.Cookies.Append("Legacy_User", Base64Encode(username),cookieOptions);
         HttpContext.Response.Cookies.Append("Secret_Key", secretKey , cookieOptions);
-        HttpContext.Response.Cookies.Append("New_User", encryptedUser,cookieOptions);
-        return Ok();
+        HttpContext.Response.Cookies.Append("New_User", encryptedUserString,cookieOptions);
+        return Ok("Encrypted user is "+ encryptedUserString);
         }
 
 private static byte[] EncryptUsingAES(string plainText, byte[] Key, byte[] IV) 
@@ -117,7 +120,7 @@ private static byte[] EncryptUsingAES(string plainText, byte[] Key, byte[] IV)
         return plaintext;  
      }
 
-     private static public byte[] EncryptionUsingRES(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding)  
+     private static byte[] EncryptionUsingRES(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding)  
 {  
  try  
  {  
@@ -135,7 +138,7 @@ private static byte[] EncryptUsingAES(string plainText, byte[] Key, byte[] IV)
  }  
 } 
 
-private static public byte[] DecryptionUsingRES(byte[]Data, RSAParameters RSAKey, bool DoOAEPPadding)  
+private static byte[] DecryptionUsingRES(byte[]Data, RSAParameters RSAKey, bool DoOAEPPadding)  
 {  
  try  
  {  

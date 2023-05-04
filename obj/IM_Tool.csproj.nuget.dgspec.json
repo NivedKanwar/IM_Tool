@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\project\\IM_Tool\\IM_Tool.csproj": {}
+    "C:\\Viva_Bits\\IM_Tool\\IM_Tool.csproj": {}
   },
   "projects": {
-    "C:\\project\\IM_Tool\\IM_Tool.csproj": {
+    "C:\\Viva_Bits\\IM_Tool\\IM_Tool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\project\\IM_Tool\\IM_Tool.csproj",
+        "projectUniqueName": "C:\\Viva_Bits\\IM_Tool\\IM_Tool.csproj",
         "projectName": "IM_Tool",
-        "projectPath": "C:\\project\\IM_Tool\\IM_Tool.csproj",
+        "projectPath": "C:\\Viva_Bits\\IM_Tool\\IM_Tool.csproj",
         "packagesPath": "C:\\Users\\Nived\\.nuget\\packages\\",
-        "outputPath": "C:\\project\\IM_Tool\\obj\\",
+        "outputPath": "C:\\Viva_Bits\\IM_Tool\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nived\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,9 +38,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "System.IO": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -49,10 +57,17 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -61,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
